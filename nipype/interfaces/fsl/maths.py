@@ -15,10 +15,10 @@ from .base import FSLCommand, FSLCommandInputSpec
 class MathsInput(FSLCommandInputSpec):
 
     in_file = File(
-        position=2, argstr="%s", exists=True, mandatory=True, desc="image to operate on"
+        position=2, argstr="'%s'", exists=True, mandatory=True, desc="image to operate on"
     )
     out_file = File(
-        genfile=True, position=-2, argstr="%s", desc="image to write", hash_files=False
+        genfile=True, position=-2, argstr="'%s'", desc="image to write", hash_files=False
     )
     _dtypes = ["float", "char", "int", "short", "double", "input"]
     internal_datatype = traits.Enum(
