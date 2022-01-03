@@ -146,7 +146,7 @@ class BasePath(TraitType):
         if not return_pathlike:
             value = str(value)
 
-        return value
+        return "'%s'" % value
 
 
 class Directory(BasePath):
